@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+button.prev,
+button.next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #944919;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background-color: #e0c7ad;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #944919;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+    </style>
+</head>
+<body>
+    <div class="carousel-controls">
+  <button class="prev">←</button>
+
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
+
+  <button class="next">→</button>
+  <script>
+    const fill = document.querySelector('.progress-fill');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let currentIndex = 0;
+const totalCards = 4;
+
+function updateProgress() {
+  const percentage = ((currentIndex + 1) / totalCards) * 100;
+  fill.style.width = percentage + '%';
+}
+
+prev.addEventListener('click', () => {
+  if (currentIndex > 0) currentIndex--;
+  updateProgress();
+  // 同時更新卡片內容
+});
+
+next.addEventListener('click', () => {
+  if (currentIndex < totalCards - 1) currentIndex++;
+  updateProgress();
+  // 同時更新卡片內容
+});
+
+updateProgress(); // 初始渲染
+  </script>
+</div>
+</body>
+</html>

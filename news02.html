@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafebara-水豚午茶季開跑，限量布丁瓶登場！</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <style>
+        section{
+            margin: 150px 0;
+        }
+        .row{
+            row-gap: 30px;
+        }
+        .news-box{
+            margin: 0 auto;
+            padding-top: 20px;
+            text-decoration: none;
+            border-top:1px solid #974713;
+        }
+        .news-box:first-child{
+            border-top:none;
+        }
+        .news-date{
+            display: flex;
+            gap: 10px;
+            color: #715941;
+            font-family: "LXGW WenKai TC";
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .news-type{
+            padding: 3px 20px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #974713;
+            border-radius: 30px;
+        }
+        .news-content{
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .news-text{
+            display: flex;
+        }
+        .news-title{
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom:1px solid #974713;
+            color: #715941;
+            font-family: "LXGW WenKai TC";
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .news-decs{
+            color: #715941;
+            font-family: "Kosugi Maru";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+        .news-pic{
+            width: 400px;
+            height: 300px;
+            border-radius: 30px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .news-pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .news-btn{
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .newspage-ctrl{
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev,.btn-next{
+            color: #FFF;
+            font-family: "Akshar";
+            font-size: 18px;
+            font-weight: 400;
+            background-color: #974713;
+            border: 1px solid #974713;
+            border-radius: 30px;
+            padding: 5px 15px;
+            text-decoration: none;
+        }
+        .btn-prev:hover,.btn-next:hover{
+            color: #974713;
+            background-color: #fff;
+        }
+        .btn-back{
+            color: #974713;
+            font-family: "Akshar";
+            font-size: 18px;
+            font-weight: 400;
+            background-color: #FFF;
+            border: 1px solid #974713;
+            border-radius: 30px;
+            padding: 5px 15px;
+            text-decoration: none;
+        }
+        .btn-back:hover{
+            color: #fff;
+            background-color: #974713;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="pic/LOGO.svg" alt="">
+    </div>
+    </header>
+    <div class="menu-button">
+        <div class="menu-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-text">MENU</div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-box">
+            <a href="index.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>首頁</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-meal.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>餐點一覽</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-news.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>活動消息</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-booking.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>訂位資訊</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="info.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>營業資訊</span>
+            </a>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="col-10 news-box">
+                <div class="news-date">
+                    2025/06/22 <div class="news-type">活動</div>
+                </div>
+                <div class="news-title">水豚生日快樂！限定插畫卡等你來拿！</div>
+                <div class="news-content">
+                    <div class="news-text">
+                        <div class="news-decs">水豚慶生週正式開跑！
+                            這週是我們的水豚店長生日，牠低調地說想開一場小派對，我們就決定來點熱鬧的。<br>
+                            活動期間： 即日起至 6/XX（日）止<br>
+                            參加方式：
+                            凡來店內用並於 Instagram 或 Facebook 打卡，並標記我們的帳號，即可獲得一張限量水豚插畫卡。<br>
+                            插畫卡介紹：
+                            限定設計插畫，為水豚的生日特別繪製，每一張都獨一無二，僅限本次活動期間贈送。<br>
+                            注意事項：
+                            每人限領一張
+                            數量有限，送完為止
+                            歡迎與水豚立牌或牠的插畫牆拍照留念
+                            這週就來和我們的水豚店長一起，過個安靜又可愛的生日吧。
+                            </div>
+                    </div>
+                    <div class="news-pic">
+                        <img src="pic/news02.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 news-btn">
+                <a href="page-news.html" class="btn-back">返回</a>
+                <div class="newspage-ctrl">
+                    <a href="news01.html" class="btn-prev">上一則</a>
+                    <a href="news03.html" class="btn-next">下一則</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="telephone">
+            <div class="pic">
+                <img src="pic/icon-tele.svg" alt="">
+            </div>
+            <div class="tel-num">(02) 1234-5678</div>
+        </div>
+        <div class="ft-logo">
+            <img src="pic/LOGO-white.svg" alt="">
+        </div>
+        <div class="icons">
+            <a href="" class="fb">
+                <img src="pic/icon-facebook.svg" alt="">
+            </a>
+            <a href="" class="ig">
+                <img src="pic/icon-instagram.svg" alt="">
+            </a>
+            <a href="page-booking.html" class="book">
+                <img src="pic/icon-book.svg" alt="">
+            </a>
+            <a href="" class="map">
+                <img src="pic/icon-map.svg" alt="">
+            </a>
+        </div>
+        <div class="btn-top">↑</div>
+    </footer>
+    <script src="js/header-footer.js"></script>
+</body>
+</html>

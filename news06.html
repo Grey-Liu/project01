@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafebara-水豚午茶季開跑，限量布丁瓶登場！</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <style>
+        section{
+            margin: 150px 0;
+        }
+        .row{
+            row-gap: 30px;
+        }
+        .news-box{
+            margin: 0 auto;
+            padding-top: 20px;
+            text-decoration: none;
+            border-top:1px solid #974713;
+        }
+        .news-box:first-child{
+            border-top:none;
+        }
+        .news-date{
+            display: flex;
+            gap: 10px;
+            color: #715941;
+            font-family: "LXGW WenKai TC";
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .news-type{
+            padding: 3px 20px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #974713;
+            border-radius: 30px;
+        }
+        .news-content{
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .news-text{
+            display: flex;
+        }
+        .news-title{
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom:1px solid #974713;
+            color: #715941;
+            font-family: "LXGW WenKai TC";
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .news-decs{
+            color: #715941;
+            font-family: "Kosugi Maru";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+        .news-pic{
+            width: 400px;
+            height: 300px;
+            border-radius: 30px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .news-pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .news-btn{
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .newspage-ctrl{
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev,.btn-next{
+            color: #FFF;
+            font-family: "Akshar";
+            font-size: 18px;
+            font-weight: 400;
+            background-color: #974713;
+            border: 1px solid #974713;
+            border-radius: 30px;
+            padding: 5px 15px;
+            text-decoration: none;
+        }
+        .btn-prev:hover,.btn-next:hover{
+            color: #974713;
+            background-color: #fff;
+        }
+        .btn-back{
+            color: #974713;
+            font-family: "Akshar";
+            font-size: 18px;
+            font-weight: 400;
+            background-color: #FFF;
+            border: 1px solid #974713;
+            border-radius: 30px;
+            padding: 5px 15px;
+            text-decoration: none;
+        }
+        .btn-back:hover{
+            color: #fff;
+            background-color: #974713;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="pic/LOGO.svg" alt="">
+    </div>
+    </header>
+    <div class="menu-button">
+        <div class="menu-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-text">MENU</div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-box">
+            <a href="index.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>首頁</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-meal.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>餐點一覽</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-news.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>活動消息</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-booking.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>訂位資訊</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="info.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>營業資訊</span>
+            </a>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="col-10 news-box">
+                <div class="news-date">
+                    2025/06/22 <div class="news-type">活動</div>
+                </div>
+                <div class="news-title">水豚週集章活動開跑！</div>
+                <div class="news-content">
+                    <div class="news-text">
+                        <div class="news-decs">水豚週，我們準備了一點可愛的小任務送給你。<br>
+                        只要在活動期間來店消費，每點一杯飲品或一份甜點，即可獲得一枚集章。集滿指定章數，就能兌換限量的「水豚造型小物」，送完為止！<br>
+                        活動時間： 6/XX（一）～6/XX（日）<br>
+                        集章方式：<br>
+                        飲品一杯／甜點一份，即可蓋一章<br>
+                        集滿 4 枚印章可兌換水豚小物一份<br>
+                        注意事項：<br>
+                        每日每人最多可集兩章<br>
+                        小物數量有限，依現場狀況發放<br>
+                        請攜帶實體集章卡參加兌換<br>
+                        想知道小物長什麼樣？偷偷透露，是水豚的迷你日常用品，實用又可愛，只有參加才拿得到！<br>
+                        </div>
+                    </div>
+                    <div class="news-pic">
+                        <img src="pic/news06.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 news-btn">
+                <a href="page-news.html" class="btn-back">返回</a>
+                <div class="newspage-ctrl">
+                    <a href="news05.html" class="btn-prev">上一則</a>
+                    <a href="news07.html" class="btn-next">下一則</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="telephone">
+            <div class="pic">
+                <img src="pic/icon-tele.svg" alt="">
+            </div>
+            <div class="tel-num">(02) 1234-5678</div>
+        </div>
+        <div class="ft-logo">
+            <img src="pic/LOGO-white.svg" alt="">
+        </div>
+        <div class="icons">
+            <a href="" class="fb">
+                <img src="pic/icon-facebook.svg" alt="">
+            </a>
+            <a href="" class="ig">
+                <img src="pic/icon-instagram.svg" alt="">
+            </a>
+            <a href="page-booking.html" class="book">
+                <img src="pic/icon-book.svg" alt="">
+            </a>
+            <a href="" class="map">
+                <img src="pic/icon-map.svg" alt="">
+            </a>
+        </div>
+        <div class="btn-top">↑</div>
+    </footer>
+    <script src="js/header-footer.js"></script>
+</body>
+</html>

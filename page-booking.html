@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafebara訂位資訊</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <style>
+        .page-bannar{
+            background: url("pic/page-bannar.png");
+            width: 1338px;
+            height: 316px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page-bannar .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 100px;
+        }
+        .page-bannar .text .title{
+            color: #56422E;
+            font-family: "LXGW WenKai TC";
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .page-bannar .text .subtitle{
+            color: #56422E;
+            font-family: "LXGW WenKai TC";
+            font-size: 20px;
+            font-weight: 400;
+        }
+        section{
+            margin-top: 60px;
+        }
+        .booking{
+            margin-bottom: 100px;
+        }
+        .col-10{
+            margin:0 auto;
+        }
+        .booking-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .serve{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .col-10 .title{
+            color: #715941;
+            font-family: "Kosugi Maru";
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px; /* 200% */
+        }
+        .col-10 .list{
+            width: 100%;
+            color: #715941;
+            font-family: "Kosugi Maru";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px; /* 200% */
+        }
+        .booking-form {
+        background: #F4C995;
+        border-radius: 50px;
+        padding: 50px 80px;
+        margin: auto;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        }
+
+        .two-cols {
+        display: flex;
+        gap: 20px;
+        }
+
+        .input-group {
+        background: white;
+        border-radius: 30px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+        }
+
+        .input-group img {
+        width: 24px;
+        height: 24px;
+        }
+
+        .input-group input,
+        .input-group select {
+        border: none;
+        outline: none;
+        flex: 1;
+        font-family: "Kosugi Maru";
+        font-size: 20px;
+        background: transparent;
+        }
+
+        .textarea-group {
+        align-items: flex-start;
+        padding: 20px;
+        }
+
+        .textarea-group textarea {
+        border: none;
+        outline: none;
+        resize: none;
+        width: 100%;
+        height: 150px;
+        font-size: 16px;
+        font-family: inherit;
+        background: transparent;
+        }
+
+        .btn-area {
+        text-align: center;
+        margin-top: 20px;
+        }
+
+        button[type="submit"] {
+        background-color: #974713;
+        color: white;
+        padding: 12px 40px;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="pic/LOGO.svg" alt="">
+    </div>
+    </header>
+    <div class="menu-button">
+        <div class="menu-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-text">MENU</div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-box">
+            <a href="index.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>首頁</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-meal.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>餐點一覽</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-news.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>活動消息</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="booking.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>訂位資訊</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="info.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>營業資訊</span>
+            </a>
+        </div>
+    </div>
+        <div class="page-bannar">
+        <div class="text">
+            <div class="title">訂位資訊</div>
+            <div class="subtitle">提早為您和水豚預留好位置</div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <div class="booking-info">
+                        <div class="title">訂位須知</div>
+                        <div class="list">訂位人數限制:<br>
+                        每次訂位人數為 1–6 人，如需更多位請來電洽詢，我們會盡量為您安排。</div>
+                        <div class="list">包場與聚會:<br>本店不開放包場或大型聚會，我們希望每位來訪的客人都能保有安靜空間。</div>
+                        <div class="list">預約保留時間:<br>預約保留時間為 10 分鐘，逾時將視現場狀況開放座位。</div>
+                        <div class="list">更改與取消:<br>若需取消或更改時間，請提前至少一天通知。</div>
+                    </div>
+                    <div class="serve">
+                        <div class="title">店內服務</div>
+                        <div class="list">服務方式:<br>店內為半自助式服務，水杯、調味請自取。</div>
+                        <div class="list">座位安排:<br>室內座位數有限，如想坐戶外草地區，請在備註中註明，我們將依天候與現場安排。</div>
+                        <div class="list">寵物友善:<br>戶外區歡迎寵物來訪，但請使用牽繩，並自備清潔用品。</div>
+                        <div class="list">飲食需求:<br>若有特殊飲食需求（全素／乳品等），歡迎於備註中提前告知，我們會盡力協助調整。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="booking">
+        <form class="container ">
+            <div class="col-10 booking-form">
+                <div class="two-cols">
+                    <div class="input-group">
+                        <img src="pic/icon-name.svg" alt="">
+                        <input type="text" placeholder="姓名" required>
+                    </div>
+                    <div class="input-group">
+                        <img src="pic/icon-people.svg" alt="">
+                        <select required>
+                            <option value="">用餐人數</option>
+                            <option value="1">1人</option>
+                            <option value="2">2人</option>
+                            <option value="2">3人</option>
+                            <option value="2">4人</option>
+                            <option value="2">5人</option>
+                            <option value="2">6人</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <img src="pic/icon-phone.svg" alt="">
+                    <input type="tel" placeholder="連絡電話" required>
+                </div>
+
+                <div class="input-group">
+                    <img src="pic/icon-gmail.svg" alt="">
+                    <input type="email" placeholder="電子信箱" required>
+                </div>
+
+                <div class="input-group">
+                    <img src="pic/icon-time.svg" alt="">
+                    <input type="datetime-local" required>
+                </div>
+
+                <div class="input-group textarea-group">
+                    <img src="pic/icon-text.svg" alt="">
+                    <textarea placeholder="備註"></textarea>
+                </div>
+
+                <div class="btn-area">
+                    <button type="submit">送出訂位</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="telephone">
+            <div class="pic">
+                <img src="pic/icon-tele.svg" alt="">
+            </div>
+            <div class="tel-num">(02) 1234-5678</div>
+        </div>
+        <div class="ft-logo">
+            <img src="pic/LOGO-white.svg" alt="">
+        </div>
+        <div class="icons">
+            <a href="" class="fb">
+                <img src="pic/icon-facebook.svg" alt="">
+            </a>
+            <a href="" class="ig">
+                <img src="pic/icon-instagram.svg" alt="">
+            </a>
+            <a href="page-booking.html" class="book">
+                <img src="pic/icon-book.svg" alt="">
+            </a>
+            <a href="" class="map">
+                <img src="pic/icon-map.svg" alt="">
+            </a>
+        </div>
+        <div class="btn-top">↑</div>
+    </footer>
+    <script src="js/header-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafebara最新消息</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <style>
+        .page-bannar{
+            background: url("pic/page-bannar.png");
+            width: 1338px;
+            height: 316px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page-bannar .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 100px;
+        }
+        .page-bannar .text .title{
+            color: #56422E;
+            font-family: "LXGW WenKai TC";
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .page-bannar .text .subtitle{
+            color: #56422E;
+            font-family: "LXGW WenKai TC";
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .news{
+            margin: 50px 0 150px 0;
+        }
+        .row{
+            row-gap: 30px;
+        }
+        .news-box{
+            margin: 0 auto;
+            padding-top: 20px;
+            text-decoration: none;
+            border-top:1px solid #974713;
+        }
+        .news-box:first-child{
+            border-top:none;
+        }
+        .news-date{
+            display: flex;
+            gap: 10px;
+            color: #715941;
+            font-family: "LXGW WenKai TC";
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .news-type{
+            padding: 3px 20px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #974713;
+            border-radius: 30px;
+        }
+        .news-content{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .news-text{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .news-title{
+            color: #715941;
+            font-family: "LXGW WenKai TC";
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .news-decs{
+            color: #715941;
+            font-family: "Kosugi Maru";
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .news-pic{
+            width: 285px;
+            height: 150px;
+            border-radius: 30px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .news-pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <div class="logo">
+        <img src="pic/LOGO.svg" alt="">
+    </div>
+    </header>
+    <div class="menu-button">
+        <div class="menu-lines">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-text">MENU</div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-box">
+            <a href="index.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>首頁</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-meal.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>餐點一覽</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-news.html.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>活動消息</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="page-booking.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>訂位資訊</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
+            <a href="info.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>營業資訊</span>
+            </a>
+        </div>
+    </div>
+    <div class="page-bannar">
+        <div class="text">
+            <div class="title">最新消息</div>
+            <div class="subtitle">從草地上的一聲輕哼  到城市裡的每一則消息</div>
+        </div>
+    </div>
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <a href="news01.html" class="col-10 news-box">
+                    <div class="news-date">
+                        2025/06/22 <div class="news-type">活動</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-text">
+                            <div class="news-title">水豚午茶季開跑，限量布丁瓶登場！</div>
+                            <div class="news-decs">春天來了，草地上的水豚換了新姿勢，我們也準備了一點小甜，讓午後多一點療癒。</div>
+                        </div>
+                        <div class="news-pic">
+                            <img src="pic/news01.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="news02.html" class="col-10 news-box">
+                    <div class="news-date">
+                        2025/06/22 <div class="news-type">活動</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-text">
+                            <div class="news-title">水豚生日快樂！限定插畫卡等你來拿！</div>
+                            <div class="news-decs">牠說牠想開生日派對，所以我們就真的幫牠辦了！慶祝水豚主角登場一週，來店打卡就送可愛限定插畫卡一張，送完為止！</div>
+                        </div>
+                        <div class="news-pic">
+                            <img src="pic/news02.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="news03.html" class="col-10 news-box">
+                    <div class="news-date">
+                        2025/06/22 <div class="news-type">活動</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-text">
+                            <div class="news-title">今晚，水豚不睡覺！夏日夜咖活動開跑</div>
+                            <div class="news-decs">夜色降臨，水豚也想一起乘涼。每晚 8 點後限定開放夜間草地座位與冰飲組合，邀你一起享受夏夜微風。</div>
+                        </div>
+                        <div class="news-pic">
+                            <img src="pic/news03.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="news04.html" class="col-10 news-box">
+                    <div class="news-date">
+                        2025/06/22 <div class="news-type">活動</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-text">
+                            <div class="news-title">Capy Sketch Day！來畫水豚，請你喝咖啡</div>
+                            <div class="news-decs">只要畫一隻水豚，不管是素描、塗鴉還是亂畫，牠都會很開心。我們也會請你喝杯咖啡！</div>
+                        </div>
+                        <div class="news-pic">
+                            <img src="pic/news04.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="news05.html" class="col-10 news-box">
+                    <div class="news-date">
+                        2025/06/22 <div class="news-type">活動</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-text">
+                            <div class="news-title">《水豚浮空祭》限時週末甜點秀登場！</div>
+                            <div class="news-decs">甜點飄起來了，水豚也飄起來了——這個週末，一起來體驗幸福到飄浮的甜點時光。</div>
+                        </div>
+                        <div class="news-pic">
+                            <img src="pic/news05.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="news06.html" class="col-10 news-box">
+                    <div class="news-date">
+                        2025/06/22 <div class="news-type">活動</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-text">
+                            <div class="news-title">水豚週集章活動開跑！</div>
+                            <div class="news-decs">點一杯、吃一塊，收集章就有機會帶走限量「水豚造型小物」！</div>
+                        </div>
+                        <div class="news-pic">
+                            <img src="pic/news06.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="news07.html" class="col-10 news-box">
+                    <div class="news-date">
+                        2025/06/22 <div class="news-type">活動</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-text">
+                            <div class="news-title">水豚出沒注意！隱藏插畫卡尋寶大作戰</div>
+                            <div class="news-decs">每張帳單背後都藏著一張水豚插畫，一起來發現、收集、療癒你的日常！</div>
+                        </div>
+                        <div class="news-pic">
+                            <img src="pic/news07.png" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="telephone">
+            <div class="pic">
+                <img src="pic/icon-tele.svg" alt="">
+            </div>
+            <div class="tel-num">(02) 1234-5678</div>
+        </div>
+        <div class="ft-logo">
+            <img src="pic/LOGO-white.svg" alt="">
+        </div>
+        <div class="icons">
+            <a href="" class="fb">
+                <img src="pic/icon-facebook.svg" alt="">
+            </a>
+            <a href="" class="ig">
+                <img src="pic/icon-instagram.svg" alt="">
+            </a>
+            <a href="page-booking.html" class="book">
+                <img src="pic/icon-book.svg" alt="">
+            </a>
+            <a href="" class="map">
+                <img src="pic/icon-map.svg" alt="">
+            </a>
+        </div>
+        <div class="btn-top">↑</div>
+    </footer>
+    <script src="js/header-footer.js"></script>
+</body>
+</html>
