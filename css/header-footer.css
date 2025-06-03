@@ -71,7 +71,11 @@
             box-sizing: border-box;
             z-index: 999;
             padding: 100px;
+            background-image: url('../pic/sidebar-capybara.png');
+            background-repeat: no-repeat;
+            background-position: bottom right;
         }
+
         .sidebar.open {
             transform: translateX(0%);
         }
