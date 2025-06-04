@@ -24,9 +24,12 @@
             left: 10px;
             bottom: -20px;
             z-index: 1000;
-            width: 120px;
+            width: 10vw;
             height: auto;
             cursor: pointer;
+        }
+        .booking-float-btn img{
+            width: 100%;
         }
 
         .btn-link {
@@ -38,8 +41,8 @@
             color: #FFFBF0;
             border: 2px solid #944919;
             border-radius: 50px;    
-            font-size: 24px;
-            font-family: "LXGW WenKai TC", sans-serif;
+            font-size: 20px;
+            font-family: "Akshar", sans-serif;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -91,19 +94,21 @@
             line-height: normal;
         }
         .bannar{
-            width: 1643px;
-            margin-left: auto;
+            width: 100%;
             position: relative;
             margin-bottom: 100px;
         }
+        .bannar .pic img{
+            width: 100%;
+        }
         .bannar h1{
             position: absolute;
-            top:516px;
-            right: 100px;
+            top: 27vw;
+            right: 6.2vw;
             font-family: "LXGW WenKai TC";
             color: #FFF;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            font-size: 60px;
+            font-size: 3.125vw;
             font-weight: 700;
             letter-spacing: 7.2px;
         }
@@ -117,12 +122,12 @@
             font-weight: 400;
             letter-spacing: 0.5em;
             top: 200px;
-            left: -100px;
+            left: 100px; 
         }
         .bannar .pic{
-            width: 1643px;
-            height: 845px;
+            width: 85vw;
             border-radius: 0px 0px 0px 250px;
+            margin-left: auto;
         }
         
         .section-goods{
@@ -134,11 +139,16 @@
         }
         .goods-bg2{
             position: absolute;
-            left: 167px;
-            top: 260px;
+            left: -2%;
+            top: 15%;
             z-index: 0;
+            width: 106%;
+        }
+        .goods-bg2 img{
+            width: 100%;
         }
         .goods-list{
+            position: relative;
             padding-top: 150px;
         }
         .goods-pic{
@@ -201,6 +211,11 @@
             position: absolute;
             z-index: -1;
             top: 400px;
+            opacity:0.4;
+            width: 100%;
+        }
+        .meal-bg img{
+            width: 100%;
         }
         .meal-list .row{
             margin-top: 30px;
@@ -251,7 +266,7 @@
         }
         .meal-card .text-box .text .content{
             color: #56422E;
-            font-family: "LXGW WenKai TC";
+            font-family: "Kosugi Maru";
             font-size: 20px;
             font-weight: 400;
         }
@@ -279,11 +294,15 @@
             position: absolute;
             right: 10px;
             top: 10px;
+            z-index: -1;
+            width: 23vw;
         }
         .news-bg02{
             position: absolute;
             left: 10px;
             bottom: 15%;
+            z-index: -1;
+            width: 13vw;
         }
         .newslist{
             padding-top: 100px;
@@ -302,6 +321,11 @@
             flex-direction: column;
             gap: 24px;
             text-decoration: none;
+            border-radius: 30px;
+            transition: 0.5s;
+        }
+        .newslist .track .card:hover{
+            background-color: #F3C897;
         }
         .newslist .track .card .text{
             color: #715941;
@@ -309,6 +333,7 @@
             font-size: 20px;
             font-weight: 400;
             line-height: 30px;
+            padding: 10px;
             
         }
         .newslist .track .card .pic{
@@ -372,7 +397,7 @@
             margin: 20px 0;
         }
         .map{
-            
+            position: relative;
         }
         .map .row{
             margin-top: 120px;
@@ -430,8 +455,12 @@
         }
         .map-footer-bg{
             position: absolute;
-            right:1px;
-            bottom: 100px;
+            right: 0;
+            bottom: 0;
+            width: 40vw;
+        }
+        .map-footer-bg img{
+            width: 100%;
         }
         .btn-center.btn-map{
             margin-top: -90px;
@@ -514,7 +543,7 @@
     
 
     <section class="section-goods">
-        <img src="pic/goods-bgc.svg" class="goods-bg2" >
+        
         <div class="container">
             <div class="col-6 section-title-box">
                 <h2 class="section-title">水豚物語</h2>
@@ -522,6 +551,9 @@
             </div>
         </div>
         <div class="container goods-list">
+            <div class="goods-bg2">
+                <img src="pic/goods-bgc.svg"  >
+            </div>
             <div class="row">
                 <div class="col-4 goods-card">
                     
@@ -643,7 +675,7 @@
                         <span>《水豚午茶會 vol.1》開放報名，一起發呆到下午三點。每人限一塊布丁，和一張曬太陽的椅子。</span>
                     </div>
                 </a>
-                <a href="" class="card">
+                <a href="news02.html" class="card">
                     <div class="pic">
                         <img src="pic/news02.png" alt="">
                     </div>
@@ -651,7 +683,7 @@
                         <span>牠說想開一場生日派對 所以我們幫牠辦了。水豚慶生週，打卡送限定插畫卡！</span>
                     </div>
                 </a>
-                <a href="" class="card">
+                <a href="news03.html" class="card">
                     <div class="pic">
                         <img src="pic/news03.png" alt="">
                     </div>
@@ -659,7 +691,7 @@
                         <span>今晚，水豚不睡覺。夏日夜咖活動開跑!夜間草地和開放限定冰飲組合只在8點後。</span>
                     </div>
                 </a>
-                <a href="" class="card">
+                <a href="news04.html" class="card">
                     <div class="pic">
                         <img src="pic/news04.png" alt="">
                     </div>
@@ -667,7 +699,7 @@
                         <span>Capy Sketch Day!來店畫一隻水豚送你一杯咖啡。素描、塗鴉、亂畫都可以，牠不介意。</span>
                     </div>
                 </a>
-                <a href="" class="card">
+                <a href="news05.html" class="card">
                     <div class="pic">
                         <img src="pic/news05.png" alt="">
                     </div>
@@ -675,7 +707,7 @@
                         <span>《水豚浮空祭》限時週末甜點秀登場！一起來體驗甜點飄起來、水豚也飄起來的幸福氛圍。  </span>
                     </div>
                 </a>
-                <a href="" class="card">
+                <a href="news06.html" class="card">
                     <div class="pic">
                         <img src="pic/news06.png" alt="">
                     </div>
@@ -683,7 +715,7 @@
                         <span>水豚週集章活動開跑！點一杯、吃一塊，蓋章就能換限量「水豚造型小物」！</span>
                     </div>
                 </a>
-                <a href="" class="card">
+                <a href="news07.html" class="card">
                     <div class="pic">
                         <img src="pic/news07.png" alt="">
                     </div>
@@ -734,7 +766,7 @@
         });
 
         nextBtn.addEventListener('click', () => {
-    
+
         if (currentIndex < totalCards - 4) {
             currentIndex++;
             updateView();
