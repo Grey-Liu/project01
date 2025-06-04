@@ -128,6 +128,12 @@
             width: 85vw;
             border-radius: 0px 0px 0px 250px;
             margin-left: auto;
+            overflow: hidden;
+        }
+        .bannar .pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .section-goods{
@@ -181,7 +187,7 @@
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
-            line-height: 40px;
+            line-height: 2em;
         }
         .card-name{
             display: flex;
@@ -202,9 +208,13 @@
             top: 380px;
             border-radius: 30px;
         }
+        .btn-goods{
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
         
         .meal{
-            margin-top: 80px;
+            margin-top: 20px;
             position: relative;
         }
         .meal-bg{
@@ -494,6 +504,14 @@
             </a>
         </div>
         <div class="sidebar-box">
+            <a href="page-aboutus.html" class="sidebar-title">
+                <div class="pic">
+                    <img src="pic/capy icon.svg" alt="">
+                </div>
+                <span>關於我們</span>
+            </a>
+        </div>
+        <div class="sidebar-box">
             <a href="page-meal.html" class="sidebar-title">
                 <div class="pic">
                     <img src="pic/capy icon.svg" alt="">
@@ -580,6 +598,11 @@
                     <p>茶是溫的 甜點是軟的 聲音是輕的 這裡沒有什麼要快的 只有一張適合靜靜坐著的位置</p>
                 </div>
             </div>
+        </div>
+        <div class="btn-center btn-goods">
+            <a href="page-info.html" class="btn-link">
+                關於我們 <span class="arrow">→</span>
+            </a>
         </div>
     </section>
 

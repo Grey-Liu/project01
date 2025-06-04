@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cafebara關於水豚</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/header-footer.css">
@@ -42,63 +42,77 @@
             font-weight: 400;
         }
         section{
-            margin: 100px auto;
-            margin-bottom: 200px;
+            margin-top: 60px;
+            margin-bottom: 100px;
         }
-        section .row{
-            row-gap: 30px;
+        .row{
+            row-gap: 120px;
+            justify-content: space-around;
         }
-        section .pic{
-            width: 100%;
-            height: 400px;
-            border-radius: 30px;
-            overflow: hidden;
-        }
-        section .pic img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .text-box{
-            box-sizing: border-box;
-            background-color: #F3C897;
-            border-radius: 30px;
-            height: 400px;
-            display: flex;
-            padding: 30px 50px;
+        .col-12 {
             position: relative;
         }
-        .text-box-bg{
+        .bannar .pic{
+            width: 100%;
+            border-radius: 100px;
+            overflow: hidden;
+        }
+        .bannar .pic img{
+            width: 100%;
+        }
+        .bannar .title{
             position: absolute;
+            writing-mode: vertical-lr;
+            right: 20%;
+            top: 25%;
+            font-size: 30px;
+            letter-spacing: 0.15em;
+            font-family: "LXGW WenKai TC";
+            color:#fff;
         }
-        .bg-1{
-            bottom: -80px;
-            right: -80px;
+        .bannar .content{
+            padding: 10px;
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            font-size: 20px;
+            font-family: "LXGW WenKai TC";
+            color:#fff;
+            line-height: 2em;
         }
-        .bg-2{
-            bottom: -70px;
-            left: -80px;
+        .goods{
+            margin-bottom: 200px;
         }
-        .bg-3{
-            bottom: -80px;
-            right: -80px;
+        .goods {
+            height: 100%;
         }
-        .text-box:last-child{
-            flex-direction: column;
-            text-decoration: none;
-            gap: 30px;
-        }
-        .icon-link{
-            display: flex;
-            gap: 15px;
-        }
-        .text-box .text{
-            color: #56422E;
+        .goods .text{
+            height: 100%;
             font-family: "Kosugi Maru";
             font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 30px;
+            line-height: 1.5em;
+            color: #56422E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 60px;
+        }
+        .goods .text.text1{
+            background: url('pic/aboutus-text-bg01.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .goods .text.text2{
+            background: url('pic/aboutus-text-bg02.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .goods .text.text3{
+            background: url('pic/aboutus-text-bg03.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-left: 90px;
+            
         }
 
     </style>
@@ -166,71 +180,70 @@
             </a>
         </div>
     </div>
-    <div class="page-bannar">
+        <div class="page-bannar">
         <div class="text">
-            <div class="title">最新消息</div>
-            <div class="subtitle">從草地上的一聲輕哼  到城市裡的每一則消息</div>
+            <div class="title">關於水豚</div>
+            <div class="subtitle">這裡是給想慢下來的你 和像水豚一樣的我們</div>
         </div>
     </div>
-    <section>
+    <section class="bannar">
+        <div class="container">
+            <div class="col-12">
+                <div class="pic">
+                    <img src="pic/aboutus-bannar.png" alt="">
+                </div>
+                <div class="title">慢慢來 也沒關係</div>
+                <div class="content">在一個微風吹拂的午後，<br>
+                一隻愛喝咖啡的水豚，慢慢走進了城市。<br>
+                牠不說話，只用溫柔的眼神，坐在角落，靜靜陪你。<br>
+                    <br>
+                我們為牠開了一間喫茶店，<br>
+                不吵雜、不匆忙，只有剛剛好的溫度和香氣。<br>
+                這裡有水豚喜歡的草、有你喜歡的甜點，<br>
+                也有，讓心安靜下來的那一杯手沖咖啡。<br>
+                    <br>
+                歡迎光臨。<br>
+                今天，也一起慢慢來吧。<br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="goods">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <div class="pic">
-                        <img src="pic/map02.png" alt="">
-                    </div>
-                </div>
-                <div class="col-6 ">
-                    <div class="text-box">
-                        <div class="text">Cafebara 水豚咖啡廳台北市大安區森 林路 42 號 1 樓<br>
-                        交通方式:<br>
-                        公車｜搭乘 0X、2X 號公車至「森林公園站」步行約 2 分鐘<br>
-                        捷運｜搭至捷運「溫柔站」出口 2，左轉直走 300 公尺<br>
-                        </div>
-                        <img class="text-box-bg bg-1"src="pic/info-foot01.png" alt="" >
+                        <img src="pic/goods01.png" alt="">
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="text-box">
-                        <div class="text">每日 11:00–20:00｜最後點餐時間 19:30<br>
-                        戶外草地與溫泉區若遇雨將暫停開放。<br>
-                        注意事項<br>
-                        水豚可拍照，請勿觸摸<br>
-                        餐點禁止外帶至溫泉區<br>
-                        若水豚正在睡覺，請讓牠繼續作夢<br>
-                        </div>
-                        <img class="text-box-bg bg-2"src="pic/info-foot02.png" alt="" >
+                    <div class="text text1">草地上的水豚，什麼都不做，卻什麼都感覺得到。<br>
+                    牠慢慢走、靜靜躺，耳邊是風，腳下是軟綠的草，陽光一片一片灑在背上，像是在替牠蓋被子。<br>
+                    沒有匆忙的目的，也不追趕時間，只是讓自己成為風景的一部分——溫柔、自在，彷彿整個午後都為牠留白。
                     </div>
                 </div>
                 <div class="col-6">
+                    <div class="text text2">水霧氤氳，空氣裡飄著安靜的暖意。<br>
+                    水豚半閉著眼，像是在聽溫泉說話。<br>
+                    牠不急著離開，也不需要熱鬧，只讓溫熱的水慢慢包住身體，把所有煩躁和思緒，一點一滴溶進水裡。<br>
+                    時光在牠身上彷彿停下腳步，只剩下呼吸與水聲，柔柔的，慢慢的，像是一場剛剛好的放空。</div>
+                </div>
+                <div class="col-4">
                     <div class="pic">
-                        <img src="pic/info01.png" alt="">
+                        <img src="pic/goods02.png" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="pic">
+                        <img src="pic/goods03.png" alt="">
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="pic">
-                        <img src="pic/info02.png" alt="">
+                    <div class="text text3">水豚坐在角落的位子上，不說話，也不吵鬧，只是靜靜地待著。<br>
+                    陽光透過玻璃灑在牠的身上，像是自然替牠預留的座位。<br>
+                    身旁是一杯剛泡好的拿鐵，桌上攤開一本沒翻幾頁的書。<br>
+                    偶爾牠抬起頭，望一望窗外的風景，又或是輕輕眨眼，把午後的慵懶藏進毛絨絨的呼吸裡。<br>
                     </div>
-                </div>
-                <div class="col-6 ">
-                    <div class="text-box">
-                        <div class="text">有任何問題、預約需求或想說的話，<br>
-                        都可以透過以下方式找到我們：<br>
-                        電話｜(02) 1234-5678<br>
-                        地址｜台北市大安區森林路 42 號 1 樓<br>
-                        Email｜hello@cafebara.tw<br>
-                        </div>
-                        <div class="icon-link">
-                        <a href="">
-                            <img src="pic/info-FB.svg" alt="">
-                        </a>
-                        <a href="">
-                            <img src="pic/info-IG.svg" alt="">
-                        </a>
-                    </div>
-                        <img class="text-box-bg bg-3"src="pic/info-foot03.png" alt="" >
-                    </div>
-                    
                 </div>
             </div>
         </div>
