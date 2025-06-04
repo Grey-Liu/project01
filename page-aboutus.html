@@ -86,11 +86,72 @@
         .goods {
             height: 100%;
         }
+        .goods .pic{
+            width: 100%;
+            border-radius: 30px;
+            position: relative;
+        }
+        .goods .pic.pic1::after{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            content: "草地";
+            top: -10%;
+            right: -10%;
+            color: #56422E;
+            font-size: 30px;
+            font-family: "LXGW WenKai TC";
+            width: 20%;
+            height: 20%;
+            background-color: #A3C998;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .goods .pic.pic2::after{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            content: "溫泉";
+            top: -10%;
+            left: -10%;
+            color: #56422E;
+            font-size: 30px;
+            font-family: "LXGW WenKai TC";
+            width: 20%;
+            height: 20%;
+            background-color: #76B8D4;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .goods .pic.pic3::after{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            content: "室內";
+            top: -10%;
+            right: -10%;
+            color: #56422E;
+            font-size: 30px;
+            font-family: "LXGW WenKai TC";
+            width: 20%;
+            height: 20%;
+            background-color: #D9A04F;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .goods .pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .goods .text{
             height: 100%;
             font-family: "Kosugi Maru";
-            font-size: 20px;
-            line-height: 1.5em;
+            font-size: 18px;
+            line-height: 1.7em;
             color: #56422E;
             display: flex;
             justify-content: center;
@@ -212,7 +273,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <div class="pic">
+                    <div class="pic pic1">
                         <img src="pic/goods01.png" alt="">
                     </div>
                 </div>
@@ -229,12 +290,12 @@
                     時光在牠身上彷彿停下腳步，只剩下呼吸與水聲，柔柔的，慢慢的，像是一場剛剛好的放空。</div>
                 </div>
                 <div class="col-4">
-                    <div class="pic">
+                    <div class="pic pic2">
                         <img src="pic/goods02.png" alt="">
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="pic">
+                    <div class="pic pic3">
                         <img src="pic/goods03.png" alt="">
                     </div>
                 </div>
