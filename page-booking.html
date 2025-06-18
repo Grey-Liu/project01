@@ -18,27 +18,21 @@
             width: 70vw;
             height: 16vw;
             margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
         }
-        .page-bannar .text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 100px;
-        }
-        .page-bannar .text .title{
+        .page-bannar .title{
+            padding-top: 3.1vw;
+            padding-bottom: 1vw;
             color: #56422E;
             font-family: "LXGW WenKai TC";
-            font-size: 40px;
+            font-size: 2vw;
             font-weight: 700;
         }
-        .page-bannar .text .subtitle{
+        .page-bannar .subtitle{
             color: #56422E;
             font-family: "LXGW WenKai TC";
-            font-size: 20px;
+            font-size: 1vw;
             font-weight: 400;
         }
         section{
@@ -50,35 +44,30 @@
         .col-10{
             margin:0 auto;
         }
-        .booking-info{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
+        .book-text .col-10 >div{
+            margin: 40px 0;
         }
-        .serve{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        
         .col-10 .title{
             color: #715941;
             font-family: "Kosugi Maru";
             font-size: 26px;
             font-style: normal;
-            font-weight: 400;
-            line-height: 40px; /* 200% */
+            font-weight: bold;
+            line-height: 40px; 
+            margin-bottom: 15px;
+
         }
-        .col-10 .list{
+        .col-10 li{
             width: 100%;
             color: #715941;
             font-family: "Kosugi Maru";
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
-            line-height: 40px; /* 200% */
+            line-height: 40px; 
+        }
+        .col-10 li span{
+            font-weight: 550;
         }
         .booking-form {
         background: #F4C995;
@@ -150,6 +139,12 @@
         border-radius: 30px;
         font-size: 18px;
         cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid #944919;
+        }
+        button[type="submit"]:hover{
+            background-color: #FFFBF0;
+            color: #944919;
         }
     </style>
 </head>
@@ -216,31 +211,58 @@
             </a>
         </div>
     </div>
-        <div class="page-bannar">
-        <div class="text">
-            <div class="title">訂位資訊</div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="page-bannar">
+            <div class="title">預約訂位</div>
             <div class="subtitle">提早為您和水豚預留好位置</div>
-        </div>
     </div>
-    <section>
-        <div class="container">
+    <section class="book-text">
+        <div class="container" >
             <div class="row">
                 <div class="col-10">
                     <div class="booking-info">
                         <div class="title">訂位須知</div>
-                        <div class="list">訂位人數限制:<br>
-                        每次訂位人數為 1–6 人，如需更多位請來電洽詢，我們會盡量為您安排。</div>
-                        <div class="list">包場與聚會:<br>本店不開放包場或大型聚會，我們希望每位來訪的客人都能保有安靜空間。</div>
-                        <div class="list">預約保留時間:<br>預約保留時間為 10 分鐘，逾時將視現場狀況開放座位。</div>
-                        <div class="list">更改與取消:<br>若需取消或更改時間，請提前至少一天通知。</div>
+                        <ul>
+                            <li>
+                                <span class="label">訂位人數限制:</span>
+                                每次訂位人數為 1–6 人，如需更多位請來電洽詢，我們會盡量為您安排。
+                            </li>
+                            <li>
+                                <span class="label">包場與聚會:</span>
+                                本店不開放包場或大型聚會，我們希望每位來訪的客人都能保有安靜空間。
+                            </li>
+                            <li>
+                                <span class="label">預約保留時間:</span>
+                                預約保留時間為 10 分鐘，逾時將視現場狀況開放座位。
+                            </li>
+                            <li>
+                                <span class="label">更改與取消:</span>
+                                若需取消或更改時間，請提前至少一天通知。
+                            </li>
+                        </ul>
                     </div>
                     <div class="serve">
                         <div class="title">店內服務</div>
-                        <div class="list">服務方式:<br>店內為半自助式服務，水杯、調味請自取。</div>
-                        <div class="list">座位安排:<br>室內座位數有限，如想坐戶外草地區，請在備註中註明，我們將依天候與現場安排。</div>
-                        <div class="list">寵物友善:<br>戶外區歡迎寵物來訪，但請使用牽繩，並自備清潔用品。</div>
-                        <div class="list">飲食需求:<br>若有特殊飲食需求（全素／乳品等），歡迎於備註中提前告知，我們會盡力協助調整。</div>
+                        <ul>
+                            <li>
+                                <span class="label">服務方式:</span>
+                                店內為半自助式服務，水杯、調味請自取。
+                            </li>
+                            <li>
+                                <span class="label">座位安排:</span>
+                                室內座位數有限，如想坐戶外草地區，請在備註中註明，我們將依天候與現場安排。
+                            </li>
+                            <li>
+                                <span class="label">寵物友善:</span>
+                                戶外區歡迎寵物來訪，但請使用牽繩，並自備清潔用品。
+                            </li>
+                            <li>
+                                <span class="label">飲食需求:</span>
+                                若有特殊飲食需求（全素／乳品等），歡迎於備註中提前告知，我們會盡力協助調整。
+                            </li>
+                        </ul>
                     </div>
+
                 </div>
             </div>
         </div>

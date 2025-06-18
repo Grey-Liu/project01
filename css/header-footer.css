@@ -14,7 +14,7 @@
             box-sizing: border-box;
             top: 0;
             right: 0;
-            z-index: 1;
+            z-index: 3;
         }
         header .logo{
             width: 11.5vw;
@@ -45,23 +45,32 @@
             align-items: center;
             cursor: pointer;
             transition: 0.3s;
+            row-gap: .5vw;
         }
         .menu-button:hover {
             background-color: #7a3213;
         }
+        
         .menu-lines {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-bottom: 5px;
+            gap: .5vw;
         }
         .menu-lines div {
-            width: 40px;
-            height: 3px;
+            width: 2.3vw;
+            height: .15vw;
             background-color: white;
+            transition: transform .30s ease, opacity .30s ease;  
+            transform-origin: center;
+        }
+        .menu-button.active .menu-lines div:nth-child(1){
+            transform: translateY(.3125vw) rotate(45deg);
+        }
+        .menu-button.active .menu-lines div:nth-child(2){
+            transform: translateY(-.3125vw) rotate(-45deg);
         }
         .menu-text {
-            font-size: 1em;
+            font-size: 1vw;
             font-weight: bold;
         }
         .sidebar {
@@ -70,7 +79,7 @@
             position: fixed;
             top: 0;
             right: 0;
-            width: 20vw;
+            width: 25vw;
             height: 100%;
             background-color: #FFFBF0;
             border-left: 4px solid #974713;
@@ -83,7 +92,7 @@
             background-image: url('../pic/sidebar-capybara.png');
             background-repeat: no-repeat;
             background-position: bottom right;
-            background-size: 80% 50%;
+            background-size: 70% 50%;
         }
 
         .sidebar.open {
@@ -142,9 +151,26 @@
             transition: transform 0.3s ease;
             z-index: -1;
             }
-        .sidebar-title span:hover::before {
+        .sidebar-title:hover span::before{
             transform: scaleX(1);
             }
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4); /* 打暗 */
+            z-index: 998; /* 比 sidebar 低一層 */
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
         footer {
             background-color: #974713;
             height: 5vw;

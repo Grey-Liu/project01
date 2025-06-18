@@ -31,6 +31,15 @@
         .booking-float-btn img{
             width: 100%;
         }
+        .booking-float-btn {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+            pointer-events: auto;
+        }
+        .booking-float-btn.hidden {
+            opacity: 0;
+            pointer-events: none; 
+        }
 
         .btn-link {
             display: inline-flex;
@@ -214,9 +223,9 @@
         }
         
         .meal{
-            margin-top: 20px;
             position: relative;
         }
+        
         .meal-bg{
             position: absolute;
             z-index: -1;
@@ -228,7 +237,7 @@
             width: 100%;
         }
         .meal-list .row{
-            margin-top: 30px;
+            row-gap: 50px;
         }
         .container.meal-list{
             margin-top: 150px;
@@ -444,6 +453,7 @@
             line-height: 30px;
         }
         .container.mapbox .googlemap{
+            margin: 0 auto;
             border-radius: 90px;
             overflow: hidden;
             height: 700px;
@@ -455,12 +465,12 @@
         }
         .map-capy{
             position: absolute;
-            right: 60px;
+            right: 170px;
             top: -140px;
         }
         .map-foot{
             position: absolute;
-            left: -100px;
+            left: -120px;
             bottom: -100px;
         }
         .map-footer-bg{
@@ -544,7 +554,7 @@
             </a>
         </div>
     </div>
-
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <a href="page-booking.html" class="booking-float-btn">
         <img src="pic/booknow.png" alt="立即預約">
     </a>
@@ -619,19 +629,7 @@
         </div>
         <div class="container meal-list">
             <div class="row">
-                <div class="col-6 meal-card" >
-                    <div class="pic">
-                        <img src="pic/meal-drink.png" alt="">
-                    </div>
-                    <div class="text-box">
-                        <div class="text">
-                            <span class="title">飲品</span>
-                            <span class="content">一口熱的 一口涼的<br>牠陪你一起喝完這一杯</span>
-                        </div>
-                        <div class="meal-arrow"></div>
-                    </div>
-                </div>
-                <div class="col-6 meal-card" >
+                <div class="col-6 meal-card">
                     <div class="pic">
                         <img src="pic/meal-mainfood.png" alt="">
                     </div>
@@ -640,12 +638,22 @@
                             <span class="title">主食</span>
                             <span class="content">吃飽<br>是為了有力氣發呆得更久一點</span>
                         </div>
-                        <div class="meal-arrow"></div>
+                        <a href="page-meal.html?tab=main" class="meal-arrow" aria-label="main"></a>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-6 meal-card" >
+                <div class="col-6 meal-card">
+                    <div class="pic">
+                        <img src="pic/meal-mainfood.png" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div class="text">
+                            <span class="title">飲品</span>
+                            <span class="content">一口熱的 一口涼的<br>牠陪你一起喝完這一杯</span>
+                        </div>
+                        <a href="page-meal.html?tab=drink" class="meal-arrow" aria-label="drink"></a>
+                    </div>
+                </div>
+                <div class="col-6 meal-card">
                     <div class="pic">
                         <img src="pic/meal-dessert.png" alt="">
                     </div>
@@ -654,10 +662,10 @@
                             <span class="title">甜點</span>
                             <span class="content">小小一塊甜<br>就能讓今天變得比昨天輕一點</span>
                         </div>
-                        <div class="meal-arrow"></div>
+                        <a href="page-meal.html?tab=dessert" class="meal-arrow" aria-label="dessert"></a>
                     </div>
                 </div>
-                <div class="col-6 meal-card" >
+                <div class="col-6 meal-card">
                     <div class="pic">
                         <img src="pic/meal-other.png" alt="">
                     </div>
@@ -666,9 +674,9 @@
                             <span class="title">其他</span>
                             <span class="content">不是主角<br>但牠們總讓一天更完整</span>
                         </div>
-                        <div class="meal-arrow"></div>
+                        <a href="page-meal.html?tab=other" class="meal-arrow" aria-label="other"></a>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
         <div class="btn-center btn-meal">
@@ -824,7 +832,7 @@
             <div class="row">
                 <img src="pic/map-capy.png" alt="" class="map-capy">
                 <img src="pic/map-foot.png" alt="" class="map-foot">
-                <div class="col-12 googlemap">
+                <div class="col-10 googlemap">
                     <iframe 
                         src="https://www.google.com/maps/d/embed?mid=1B6vhfXuBIAHjbcapUZDbxJUX7sQc3DE&ehbc=2E312F&noprof=1"
                         width="100%" 
@@ -882,16 +890,15 @@
             const viewportHeight = window.innerHeight;
             const fullHeight = document.body.scrollHeight;
 
-            // 若視窗底部已抵達頁面底部
-            if (scrollY + viewportHeight >= fullHeight - 100) {
-            floatBtn.style.display = 'none';
+            if (scrollY + viewportHeight >= fullHeight - 230) {
+                floatBtn.classList.add('hidden');
             } else {
-            floatBtn.style.display = 'block';
+                floatBtn.classList.remove('hidden');
             }
         }
 
         window.addEventListener('scroll', checkScroll);
-        window.addEventListener('load', checkScroll); // 初始也檢查一次
+        window.addEventListener('load', checkScroll);
         
     </script>
 </body>

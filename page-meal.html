@@ -19,27 +19,21 @@
             width: 70vw;
             height: 16vw;
             margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+            margin-bottom: 80px;
         }
-        .page-bannar .text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 100px;
-        }
-        .page-bannar .text .title{
+        .page-bannar .title{
+            padding-top: 3.1vw;
+            padding-bottom: 1vw;
             color: #56422E;
             font-family: "LXGW WenKai TC";
-            font-size: 40px;
+            font-size: 2vw;
             font-weight: 700;
         }
-        .page-bannar .text .subtitle{
+        .page-bannar .subtitle{
             color: #56422E;
             font-family: "LXGW WenKai TC";
-            font-size: 20px;
+            font-size: 1vw;
             font-weight: 400;
         }
         .menu-tabs {
@@ -48,7 +42,7 @@
             border: 2px solid #974713;
             border-radius: 999px;
             /* overflow: hidden; */
-            width: 1000px;
+            width: 1200px;
             margin: 50px auto;
             background-color: #fffaf0;
             gap: 100px;
@@ -124,6 +118,13 @@
             font-weight: 400;
             line-height: 30px; /* 150% */
         }
+        .meal-fade {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .meal-visible {
+            opacity: 1;
+        }
         .meal-drink,.meal-dessert,.meal-other{
             display: none;
         }
@@ -196,11 +197,10 @@
             </a>
         </div>
     </div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="page-bannar">
-        <div class="text">
-            <div class="title">餐點一覽</div>
+            <div class="title">餐點預覽</div>
             <div class="subtitle">每一道  都像水豚慢慢挑過的午後味道</div>
-        </div>
     </div>
     <section class="meal">
         <div class="menu-tabs">
@@ -446,69 +446,69 @@
     </footer>
     <script src="js/header-footer.js"></script>
     <script>
-    //
+        const tabs = document.querySelectorAll('.menu-tabs .tab');
+        const indicator = document.querySelector('.menu-tabs .indicator');
+        const contentSections = [
+            document.querySelector('.meal-main'),
+            document.querySelector('.meal-drink'),
+            document.querySelector('.meal-dessert'),
+            document.querySelector('.meal-other'),
+        ];
 
-    const tabs = document.querySelectorAll('.menu-tabs .tab');
-    const indicator = document.querySelector('.menu-tabs .indicator');
+        const tabMap = {
+            main: 0,
+            drink: 1,
+            dessert: 2,
+            other: 3
+        };
 
-    function moveIndicator(target) {
-        const parent = target.parentElement;
-        const left = target.offsetLeft;
-        const width = target.offsetWidth;
+        function moveIndicator(target) {
+            const left = target.offsetLeft;
+            const width = target.offsetWidth;
+            indicator.style.left = `${left}px`;
+            indicator.style.width = `${width}px`;
+        }
 
-        indicator.style.left = `${left}px`;
-        indicator.style.width = `${width}px`;
-    }
+        function switchTab(index) {
+                tabs.forEach((t, i) => {
+                    t.classList.toggle('active', i === index);
+                    contentSections[i].style.display = i === index ? 'block' : 'none';
+                });
+                moveIndicator(tabs[index]);
+            }
 
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-        // 移除舊 active，設定新的
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    switchTab(index);
+                });
+            });
 
-        // 動態移動 indicator
-        moveIndicator(tab);
-        });
-    });
-
-    // 初始狀態設定在 active 的 tab 上
-    window.addEventListener('load', () => {
-        const activeTab = document.querySelector('.menu-tabs .tab.active');
-        if (activeTab) moveIndicator(activeTab);
-    });
-
-    const contentSections = [
-    document.querySelector('.meal-main'),
-    document.querySelector('.meal-drink'),
-    document.querySelector('.meal-dessert'),
-    document.querySelector('.meal-other'),
-    ];
-
-    tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        // 切換 active 樣式
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        // 顯示對應內容區塊，隱藏其他
+            window.addEventListener('load', () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const tabParam = urlParams.get('tab');
+                const defaultIndex = tabMap[tabParam] !== undefined ? tabMap[tabParam] : 0;
+                switchTab(defaultIndex);
+            });
+            function switchTab(index) {
         contentSections.forEach((section, i) => {
-        section.style.display = i === index ? 'block' : 'none';
+            if (i === index) {
+                section.style.display = 'block';
+                section.classList.add('meal-fade');
+                section.classList.remove('meal-visible');
+
+                
+                setTimeout(() => {
+                    section.classList.add('meal-visible');
+                }, 10); 
+            } else {
+                section.style.display = 'none';
+                section.classList.remove('meal-visible', 'meal-fade');
+            }
         });
 
-        // 移動 indicator
-        moveIndicator(tab);
-    });
-    });
-
-    // 頁面載入時，預設只顯示第一區
-    window.addEventListener('load', () => {
-    const activeTab = document.querySelector('.menu-tabs .tab.active');
-    if (activeTab) moveIndicator(activeTab);
-
-    contentSections.forEach((section, i) => {
-        section.style.display = i === 0 ? 'block' : 'none';
-    });
-    });
-    </script>   
+        tabs.forEach((t, i) => t.classList.toggle('active', i === index));
+        moveIndicator(tabs[index]);
+    }
+    </script>
 </body>
 </html>
