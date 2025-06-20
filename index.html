@@ -40,6 +40,12 @@
             opacity: 0;
             pointer-events: none; 
         }
+        @media screen and (max-width: 768px){
+            .booking-float-btn{
+                display: none;
+            }
+        }
+
 
         .btn-link {
             display: inline-flex;
@@ -64,7 +70,9 @@
             background-color: #FFFBF0;
             color: #944919;
         }
+        @media screen and (max-width: 768px){
 
+        }
 
         section{
             box-sizing: border-box;
@@ -103,13 +111,35 @@
             font-weight: 400;
             line-height: normal;
         }
+        @media screen and (max-width: 768px){
+            .section-title{
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .section-subtitle{
+                display: none;
+            }
+        }
         .bannar{
             width: 100%;
             position: relative;
             margin-bottom: 100px;
+            
+        }        
+        .bannar .pic{
+            width: 85vw;
+            border-radius: 0px 0px 0px 250px;
+            margin-left: auto;
+            overflow: hidden;
         }
         .bannar .pic img{
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-top: 1px solid #FFFBF0;
         }
         .bannar h1{
             position: absolute;
@@ -134,24 +164,49 @@
             top: 200px;
             left: 100px; 
         }
-        .bannar .pic{
-            width: 85vw;
-            border-radius: 0px 0px 0px 250px;
-            margin-left: auto;
-            overflow: hidden;
+
+
+        @media screen and (max-width: 768px){
+            .bannar{
+                margin-top: 30vh;
+                margin-bottom: 0;
+            }
+            .bannar .pic{
+                width: 100%;
+                height: 65vh;
+                border-radius: 100px 100px 0 0;
+                
+            }
+            .bannar .pic img{
+                object-position: 25% center;
+            }
+            .bannar h1{
+                position: absolute;
+                top: -27vw;
+                right: 8vw;
+                color: #5A4E3C;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                font-size: 5.5vw;
+                font-weight: 700;
+                letter-spacing: .2em;
+            }
+            .bannar h2{
+                writing-mode:unset;
+                color: white;
+                font-size: 6vw;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                top:20vw;
+                right: 20vw;
+            }
         }
-        .bannar .pic img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
+
         .section-goods{
             position: relative;
             background: url("pic/Subtract.png");
             background-repeat: no-repeat;
             background-size: cover;   
             background-position: center;
+            
         }
         .goods-bg2{
             position: absolute;
@@ -222,7 +277,25 @@
             margin-top: 100px;
             margin-bottom: 100px;
         }
-        
+        @media screen and (max-width: 768px){
+            .goods-list{
+                padding-top: 80px;
+                
+            }
+            .goods-list .row{
+                row-gap: 80px;
+                justify-content: center;
+            }
+            .goods-bg2{
+                display: none;
+            }
+            .btn-goods{
+                margin-top: 70px;
+                margin-bottom: 50px;
+            }
+        }
+
+
         .meal{
             position: relative;
         }
@@ -253,7 +326,7 @@
             box-sizing: border-box;
         }
         .meal-card .pic{
-            flex: 1;
+            
             box-sizing: border-box;
             border-radius: 30px;
         }
@@ -273,7 +346,7 @@
             box-sizing: border-box;
             flex-direction: column;
             gap: 40px;
-            width: 278px;
+            width: 100%;
             line-height: 2em;
         }
         .meal-card .text-box .text .title{
@@ -281,7 +354,7 @@
             font-family: "LXGW WenKai TC";
             font-size: 32px;
             font-weight: 400;
-            height: 50px;
+            padding-bottom: 20px;
             border-bottom: 1px solid #56422E;
         }
         .meal-card .text-box .text .content{
@@ -306,7 +379,33 @@
         .btn-meal{
             margin: 60px 0;
         }
-
+        @media screen and (max-width: 768px){
+            .meal{
+                padding-top: 0;
+            }
+            .meal-bg{
+                display: none;
+            }
+            .container.meal-list{
+                margin-top: 70px;
+            }
+            .meal-card .pic{
+                width: 45vw;
+                height: 45vw;
+            }
+            .meal-card .text-box .text{
+                gap: 0;
+            }
+            .meal-card .text-box .text .title{
+                font-size: 20px;
+                padding-bottom: 8px;
+            }
+            .meal-card .text-box .text .content{
+                margin-top: 8px;
+                font-size: 16px;
+                line-height: 1.5em;
+            }
+        }
         .news{
             position: relative;
         }
@@ -416,10 +515,58 @@
         .btn-news{
             margin: 20px 0;
         }
-        .map{
+        button:disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            cursor: default;
+        }
+        @media screen and (max-width: 768px) {
+            .news{
+                padding-top: 50px;
+            }
+            .news .btn-link{
+                position: relative;
+                top:-10vh;
+            }
+            .news-bg01{
+                width: 70vw;
+                top: -30vw;
+                right: 18vw;
+            }
+            .news-bg02{
+                width: 70vw;
+                top:auto;
+                bottom: 0vw;
+                left: 18vw;
+            }
+            .newslist .track{
+                width: 75vw;
+                margin: 0 auto;
+            }
+            .newslist{
+                padding-top: 50px;
+            }
+            .track-controls{
+                position: relative;
+                top:-75vw;
+                width: 98vw;
+            }
+            .progress-bar{
+                display: none;
+            }
+            .btn-prev, .btn-next{
+                width: 10vw;
+                height: 10vw;
+            }
+            .newslist .track .card{
+                min-width:75vw
+            }
+        }
+
+        .maps{
             position: relative;
         }
-        .map .row{
+        .maps .row{
             margin-top: 120px;
             margin-bottom: 150px;
             position: relative;
@@ -457,7 +604,7 @@
             margin: 0 auto;
             border-radius: 90px;
             overflow: hidden;
-            height: 700px;
+            
         }
         .container.mapbox .googlemap img{
             width: 100%;
@@ -487,7 +634,45 @@
             margin-top: -90px;
             margin-bottom: 100px;
         }
-
+        .maps iframe{
+            height: 700px;
+            width: 100%;
+        }
+        @media screen and (max-width: 768px){
+            .maps{
+                padding-top:50px
+            }
+            .maps .row{
+                margin-top: 50px;
+                margin-bottom: 100px;
+            }
+            .container.mapbox{
+                margin-top: 50px;
+            }
+            .container.mapbox .text span{
+                padding: 20px;
+                font-size: 20px;
+            }
+            .maps .info{
+                row-gap: 20px;
+            }
+            .maps iframe{
+                height: 400px;
+            }
+            .map-foot{
+                display: none;
+            }
+            .map-capy{
+                width: 50vw;
+                right: 25vw;
+                top:-22vw;
+            }
+            .map-footer-bg{
+                width: 90vw;
+                right: 6vw;
+                bottom: 10vw;
+            }
+        }
 
     </style>
 </head>
@@ -574,7 +759,7 @@
     <section class="section-goods">
         
         <div class="container">
-            <div class="col-6 section-title-box">
+            <div class="col-6 col-md-8 section-title-box">
                 <h2 class="section-title">水豚物語</h2>
                 <p class="section-subtitle">有光的午後  有風的草地  也有牠剛好坐著的樣子</p>
             </div>
@@ -584,7 +769,7 @@
                 <img src="pic/goods-bgc.svg"  >
             </div>
             <div class="row">
-                <div class="col-4 goods-card">
+                <div class="col-4 col-md-10 goods-card">
                     
                     <div class="goods-pic">
                         <img src="pic/goods01.png" alt="">
@@ -592,7 +777,7 @@
                     <div class="card-name">草地散步日</div>
                     <p>今天的步伐慢一點 草還是軟的 風還是暖的 水豚正在用牠的節奏陪你走一圈午後</p>
                 </div>
-                <div class="col-4 goods-card">
+                <div class="col-4 col-md-10 goods-card">
                     
                     <div class="goods-pic">
                         <img src="pic/goods02.png" alt="">
@@ -600,7 +785,7 @@
                     <div class="card-name">悠閒泡湯日</div>
                     <p>泡在熱氣裡 不說話也沒關係 水豚泡湯 我們泡時間 一起溫柔地發個呆</p>
                 </div>
-                <div class="col-4 goods-card">
+                <div class="col-4 col-md-10 goods-card">
                     
                     <div class="goods-pic">
                         <img src="pic/goods03.png" alt="">   
@@ -623,14 +808,14 @@
             <img src="pic/meal-bg.png" alt="">
         </div>
         <div class="container">
-            <div class="col-6 section-title-box">
+            <div class="col-6 col-md-8 section-title-box">
                 <h2 class="section-title">水豚食光</h2>
                 <p class="section-subtitle">在香氣裡慢下來  喝一口療癒  吃一點可愛</p>
             </div>
         </div>
         <div class="container meal-list">
             <div class="row">
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/meal-mainfood.png" alt="">
                     </div>
@@ -642,7 +827,7 @@
                         <a href="page-meal.html?tab=main" class="meal-arrow" aria-label="main"></a>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/meal-mainfood.png" alt="">
                     </div>
@@ -654,7 +839,7 @@
                         <a href="page-meal.html?tab=drink" class="meal-arrow" aria-label="drink"></a>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/meal-dessert.png" alt="">
                     </div>
@@ -666,7 +851,7 @@
                         <a href="page-meal.html?tab=dessert" class="meal-arrow" aria-label="dessert"></a>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/meal-other.png" alt="">
                     </div>
@@ -692,7 +877,7 @@
         <img src="pic/news-bg01.png" alt="" class="news-bg01">
         <img src="pic/news-bg02.png" alt="" class="news-bg02">
         <div class="container">
-            <div class="col-6 section-title-box">
+            <div class="col-6 col-md-8 section-title-box">
                 <h2 class="section-title">水豚快報</h2>
                 <p class="section-subtitle">日子慢慢地過  我們也準備了一點新鮮事</p>
             </div>
@@ -766,46 +951,95 @@
         </div>
 
         <script>
-        const track = document.querySelector('.track');
-        const cards = document.querySelectorAll('.card');
-        const prevBtn = document.querySelector('.btn-prev');
-        const nextBtn = document.querySelector('.btn-next');
-        const progressFill = document.querySelector('.progress-fill');
 
-        const totalCards = cards.length;
+        const track_el = document.querySelector('.track');
+        const cards_el = track_el.querySelectorAll('.card');
+        const prevBtn_el = document.querySelector('.btn-prev');
+        const nextBtn_el = document.querySelector('.btn-next');
+        const progressFill_el = document.querySelector('.progress-fill');
+
         let currentIndex = 0;
+        let visibleCards = 4; // 預設桌機版
+        let maxIndex = 0;
+        const totalCards = cards_el.length;
+
+        function updateVisibleCards() {
+        const mq = window.matchMedia('(max-width: 768px)');
+        visibleCards = mq.matches ? 1 : 4;
+        }
+
+        function updateMaxIndex() {
+        maxIndex = Math.max(0, totalCards - visibleCards);
+        }
 
         function updateView() {
-        const cardWidth = cards[0].offsetWidth;
-        const gap = parseInt(getComputedStyle(track).gap || 0) || 0;
+        // 若卡片數無效，不處理
+        if (totalCards === 0 || visibleCards === 0) {
+            progressFill_el.style.width = `0%`;
+            prevBtn_el.disabled = true;
+            nextBtn_el.disabled = true;
+            return;
+        }
+
+        // 1. 滑動 track
+        const cardWidth = cards_el[0].offsetWidth;
+        const gap = parseInt(getComputedStyle(track_el).gap) || 0;
         const scrollAmount = (cardWidth + gap) * currentIndex;
 
-        track.scrollTo({
+        track_el.scrollTo({
             left: scrollAmount,
             behavior: 'smooth'
         });
 
-        const progressPercent = ((currentIndex + 1) / (totalCards-3)) * 100;
-        progressFill.style.width = progressPercent + '%';
+        // 2. 計算進度條
+        const totalMovableSteps = totalCards - visibleCards;
+
+        let progressPercent = 25;
+        if (totalMovableSteps <= 0) {
+            progressPercent = 100;
+        } else {
+            progressPercent += (currentIndex) * (75 / totalMovableSteps);
         }
 
-        prevBtn.addEventListener('click', () => {
-        
+        if (isNaN(progressPercent) || !isFinite(progressPercent)) {
+            progressPercent = 100;
+        }
+
+        progressFill_el.style.width = `${Math.min(progressPercent, 100)}%`;
+
+        // 3. 左右按鈕禁用控制
+        prevBtn_el.disabled = currentIndex === 0;
+        nextBtn_el.disabled = currentIndex >= totalMovableSteps;
+    }
+
+        function handleResize() {
+        updateVisibleCards();
+        updateMaxIndex();
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        updateView();
+        }
+
+        // 初始設定
+        handleResize();
+
+        // 滑動按鈕事件
+        prevBtn_el.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
             updateView();
         }
         });
 
-        nextBtn.addEventListener('click', () => {
-
-        if (currentIndex < totalCards - 4) {
+        nextBtn_el.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
             currentIndex++;
             updateView();
         }
         });
 
-        window.addEventListener('load', updateView);
+        // 螢幕尺寸變動時
+        window.addEventListener('resize', handleResize);
+        
         </script>
 
         <div class="btn-center btn-news">
@@ -814,32 +1048,34 @@
             </a>
         </div>
     </section>
-    <section class="map">
+    <section class="maps">
         <div class="container">
-            <div class="col-6 section-title-box">
+            <div class="col-6 col-md-8 section-title-box">
                 <h2 class="section-title">水豚出沒地</h2>
                 <p class="section-subtitle">這裡每一個轉角  都有牠安靜經過的痕跡</p>
             </div>
         </div>
         <div class="container mapbox">
-            <div class="row">
-                <div class="col-6 pic">
-                    <img src="pic/map01.png" alt="">
+            <div class="row info">
+                <div class="col-6 col-md-12 ">
+                    <div class="pic">
+                        <img src="pic/map01.png" alt="">
+                    </div>
                 </div>
-                <div class="col-6 text">
-                    <span>營業時間：每日 11:00–20:00（最後點餐 19:30）<br><br>公休日：每週二<br><br>地址：台北市大安區森林路 42 號 1 樓<br><br>電話：(02) 1234- 5678</span>
+                <div class="col-6 col-md-12 ">
+                    <div class="text">
+                        <span>營業時間：每日 11:00–20:00（最後點餐 19:30）<br><br>公休日：每週二<br><br>地址：台北市大安區森林路 42 號 1 樓<br><br>電話：(02) 1234- 5678</span>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <img src="pic/map-capy.png" alt="" class="map-capy">
                 <img src="pic/map-foot.png" alt="" class="map-foot">
-                <div class="col-10 googlemap">
+                <div class="col-10 col-md-12 googlemap">
                     <iframe 
+                        class="map-frame"
                         src="https://www.google.com/maps/d/embed?mid=1B6vhfXuBIAHjbcapUZDbxJUX7sQc3DE&ehbc=2E312F&noprof=1"
-                        width="100%" 
-                        height="700" 
-                        style="border:0; border-radius: 90px;" 
-                        allowfullscreen="" 
+                        allowfullscreen 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>

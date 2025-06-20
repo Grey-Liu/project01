@@ -11,10 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <style>
+        body{
+            position: relative;
+            background-color: #FFFBF0;
+        }
         .page-bannar{
-            background: url("pic/page-bannar.png");
+            background: url("pic/page_bannar.png");
             background-repeat: no-repeat;
             background-size: 100%;
+            background-position: 50% 90%;
+            border-radius: 0 0 150px 150px;
             width: 70vw;
             height: 16vw;
             margin: 0 auto;
@@ -35,6 +41,21 @@
             font-size: 1vw;
             font-weight: 400;
         }
+        @media screen and (max-width: 768px){
+            .page-bannar{
+                width: 100vw;
+                height: 28vh;
+                border-radius: 0 0 60px 60px;
+            }
+            .page-bannar .title{
+                padding-top:20vw;
+                font-size: 6vw;
+            }
+            .page-bannar .subtitle{
+                font-size: 4vw;
+                padding-top:1vw;
+            }
+        }
         section{
             margin-top: 60px;
             margin-bottom: 100px;
@@ -53,6 +74,9 @@
         }
         .bannar .pic img{
             width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
         }
         .bannar .title{
             position: absolute;
@@ -73,6 +97,28 @@
             font-family: "LXGW WenKai TC";
             color:#fff;
             line-height: 2em;
+        }
+        @media screen and (max-width: 768px){
+            .bannar .pic{
+                border-radius: 40px;
+                height: 40vh;
+            }
+            .bannar .title{
+                right: 13%;
+                top: 25%;
+                font-size: 16px;
+                letter-spacing: 0.15em;
+            }
+            .bannar .content{
+                padding: 10px;
+                position: absolute;
+                bottom: 20%;
+                left: 5%;
+                font-size: 12px;
+                font-family: "LXGW WenKai TC";
+                color:#fff;
+                line-height: 1.5em;
+            }
         }
         .goods{
             margin-bottom: 200px;
@@ -145,7 +191,7 @@
             height: 100%;
             font-family: "Kosugi Maru";
             font-size: 18px;
-            line-height: 1.7em;
+            line-height: 1.5em;
             color: #56422E;
             display: flex;
             justify-content: center;
@@ -169,8 +215,43 @@
             padding-left: 90px;
             
         }
-
-    </style>
+        @media screen and (max-width: 768px) {
+            .row{
+                row-gap: 60px;
+            }
+            .goods .row > *:nth-child(1) { order: 1; } 
+            .goods .row > *:nth-child(2) { order: 2; } 
+            .goods .row > *:nth-child(3) { order: 4; } 
+            .goods .row > *:nth-child(4) { order: 3; } 
+            .goods .row > *:nth-child(5) { order: 5; } 
+            .goods .row > *:nth-child(6) { order: 6; } 
+            
+            .goods .text.text1,
+            .goods .text.text2,
+            .goods .text.text3{
+                background:none;
+                font-size: 16px;
+                padding: 10px 40px;
+                margin-bottom: 40px;
+                background-color: #A3C998;
+                border-radius: 30px;
+            }
+            .goods .text.text2{
+                background-color: #76B8D4;
+            }
+            .goods .text.text3{
+                background-color: #D9A04F;
+            }
+            .goods .pic.pic1::after,
+            .goods .pic.pic2::after,
+            .goods .pic.pic3::after{
+                top: auto;
+                left: auto;
+                right: 37%;
+                bottom: -10%;
+            }
+        }
+            </style>
 </head>
 <body>
     <header>
@@ -242,7 +323,8 @@
     </div>
     <section class="bannar">
         <div class="container">
-            <div class="col-12">
+            <div class="row">
+                <div class="col-12 ">
                 <div class="pic">
                     <img src="pic/aboutus-bannar.png" alt="">
                 </div>
@@ -260,42 +342,43 @@
                 今天，也一起慢慢來吧。<br>
                 </div>
             </div>
+            </div>
         </div>
     </section>
     <section class="goods">
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4 col-md-10">
                     <div class="pic pic1">
                         <img src="pic/goods01.png" alt="">
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="text text1">草地上的水豚，什麼都不做，卻什麼都感覺得到。<br>
+                <div class="col-6 col-md-12">
+                    <div class="text text1">草地上的水豚，什麼都不做，卻什麼都感覺得到，
                     牠慢慢走、靜靜躺，耳邊是風，腳下是軟綠的草，陽光一片一片灑在背上，像是在替牠蓋被子。<br>
                     沒有匆忙的目的，也不追趕時間，只是讓自己成為風景的一部分——溫柔、自在，彷彿整個午後都為牠留白。
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="text text2">水霧氤氳，空氣裡飄著安靜的暖意。<br>
+                <div class="col-6 col-md-12">
+                    <div class="text text2">水霧氤氳，空氣裡飄著安靜的暖意，
                     水豚半閉著眼，像是在聽溫泉說話。<br>
                     牠不急著離開，也不需要熱鬧，只讓溫熱的水慢慢包住身體，把所有煩躁和思緒，一點一滴溶進水裡。<br>
                     時光在牠身上彷彿停下腳步，只剩下呼吸與水聲，柔柔的，慢慢的，像是一場剛剛好的放空。</div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 col-md-10">
                     <div class="pic pic2">
                         <img src="pic/goods02.png" alt="">
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 col-md-10">
                     <div class="pic pic3">
                         <img src="pic/goods03.png" alt="">
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="text text3">水豚坐在角落的位子上，不說話，只是靜靜地待著。<br>
+                <div class="col-6 col-md-12">
+                    <div class="text text3">水豚坐在角落的位子上，不說話，只是靜靜地待著，
                     陽光透過玻璃灑在牠的身上，像是替牠預留的座位。<br>
-                    身旁是剛泡好的拿鐵，桌上攤開一本沒翻幾頁的書。<br>
+                    身旁是剛泡好的拿鐵，桌上攤開一本沒翻幾頁的書，
                     偶爾牠抬起頭，望一望窗外的風景，又或是輕輕眨眼，把午後的慵懶藏進毛絨絨的呼吸裡。<br>
                     </div>
                 </div>

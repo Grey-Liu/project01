@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <style>
+        body{
+            position: relative;
+            background-color: #FFFBF0;
+        }
         section{
             margin-top: 150px;
             margin-bottom: 200px;
@@ -121,6 +125,28 @@
             color: #fff;
             background-color: #974713;
         }
+        @media screen and (max-width: 768px){
+            .news-content{
+                flex-direction: column;
+            }
+            .news-pic{
+                width: 100%;
+                height: auto;
+            }
+            .news-text{
+                gap: 15px;
+            }
+            .news-title,
+            .news-date{
+                font-size: 20px;
+            }
+            .news-type {
+                font-size: 16px;
+            }
+            .news-decs{
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -188,7 +214,7 @@
     </div>
     <section>
         <div class="container">
-            <div class="col-10 news-box">
+            <div class="col-10 col-md-12 news-box">
                 <div class="news-date">
                     2025/06/22 <div class="news-type">活動</div>
                 </div>

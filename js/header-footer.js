@@ -13,3 +13,10 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
     menuBtn.classList.remove('active');         
 });
+
+document.querySelector('.btn-top').addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 平滑滾動
+    });
+});

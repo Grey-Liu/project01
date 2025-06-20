@@ -27,7 +27,7 @@
 .col-12 { width: 100%;}
 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .col-md-1  { width: 8.333333%;}
     .col-md-2  { width: 16.666666%;}
     .col-md-3  { width: 25%;}
@@ -41,7 +41,7 @@
     .col-md-11 { width: 91.666666%;}
     .col-md-12 { width: 100%;}
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .col-lg-1  { width: 8.333333%;}
     .col-lg-2  { width: 16.666666%;}
     .col-lg-3  { width: 25%;}
@@ -55,7 +55,7 @@
     .col-lg-11 { width: 91.666666%;}
     .col-lg-12 { width: 100%;}
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .col-xl-1  { width: 8.333333%;}
     .col-xl-2  { width: 16.666666%;}
     .col-xl-3  { width: 25%;}
@@ -69,7 +69,7 @@
     .col-xl-11 { width: 91.666666%;}
     .col-xl-12 { width: 100%;}
 }
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 1400px) {
     .col-xxl-1  { width: 8.333333%;}
     .col-xxl-2  { width: 16.666666%;}
     .col-xxl-3  { width: 25%;}
@@ -97,7 +97,7 @@
 .row-cols-11 > .col { width: 9.090909%;}
 .row-cols-12 > .col { width: 8.333333%;}
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .row-cols-md-1 > .col { width: 100%;}
     .row-cols-md-2 > .col { width: 50%;}
     .row-cols-md-3 > .col { width: 33.333333%;}
@@ -111,7 +111,7 @@
     .row-cols-md-11 > .col { width: 9.090909%;}
     .row-cols-md-12 > .col { width: 8.333333%;}
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .row-cols-lg-1 > .col { width: 100%;}
     .row-cols-lg-2 > .col { width: 50%;}
     .row-cols-lg-3 > .col { width: 33.333333%;}
@@ -125,7 +125,7 @@
     .row-cols-lg-11 > .col { width: 9.090909%;}
     .row-cols-lg-12 > .col { width: 8.333333%;}
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .row-cols-xl-1 > .col { width: 100%;}
     .row-cols-xl-2 > .col { width: 50%;}
     .row-cols-xl-3 > .col { width: 33.333333%;}
@@ -139,7 +139,7 @@
     .row-cols-xl-11 > .col { width: 9.090909%;}
     .row-cols-xl-12 > .col { width: 8.333333%;}
 }
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 1400px) {
     .row-cols-xxl-1 > .col { width: 100%;}
     .row-cols-xxl-2 > .col { width: 50%;}
     .row-cols-xxl-3 > .col { width: 33.333333%;}

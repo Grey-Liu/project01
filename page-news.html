@@ -11,10 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <style>
+        body{
+            position: relative;
+            background-color: #FFFBF0;
+        }
         .page-bannar{
-            background: url("pic/page-bannar.png");
+            background: url("pic/page_bannar.png");
             background-repeat: no-repeat;
             background-size: 100%;
+            background-position: 50% 90%;
+            border-radius: 0 0 150px 150px;
             width: 70vw;
             height: 16vw;
             margin: 0 auto;
@@ -35,8 +41,24 @@
             font-size: 1vw;
             font-weight: 400;
         }
+        @media screen and (max-width: 768px){
+            .page-bannar{
+                width: 100vw;
+                height: 28vh;
+                border-radius: 0 0 60px 60px;
+            }
+            .page-bannar .title{
+                padding-top:20vw;
+                font-size: 6vw;
+            }
+            .page-bannar .subtitle{
+                font-size: 4vw;
+                padding-top:1vw;
+            }
+        }
         .news{
-            margin: 50px 0 150px 0;
+            margin-top: 50px;
+            margin-bottom: 150px;
         }
         .row{
             row-gap: 30px;
@@ -45,11 +67,9 @@
             margin: 0 auto;
             padding-top: 20px;
             text-decoration: none;
-            border-top:1px solid #974713;
+            
         }
-        .news-box:first-child{
-            border-top:none;
-        }
+        
         .news-date{
             display: flex;
             gap: 10px;
@@ -58,6 +78,11 @@
             font-size: 24px;
             font-weight: 400;
             margin-bottom: 15px;
+            padding-top: 20px;
+            border-top:1px solid #974713
+        }
+        .news-box:first-of-type .news-date{
+            border:none
         }
         .news-type{
             padding: 3px 10px;
@@ -101,6 +126,25 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        @media screen and (max-width: 768px){
+            .news-pic{
+                width: 25vw;
+                height: 25vw;
+            }
+            .news-text{
+                gap: 15px;
+            }
+            .news-title,
+            .news-date{
+                font-size: 20px;
+            }
+            .news-type {
+                font-size: 16px;
+            }
+            .news-decs{
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -176,7 +220,7 @@
     <section class="news">
         <div class="container">
             <div class="row">
-                <a href="news01.html" class="col-10 news-box">
+                <a href="news01.html" class="col-10 col-md-12 news-box">
                     <div class="news-date">
                         2025/06/22 <div class="news-type">活動</div>
                     </div>
@@ -190,7 +234,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="news02.html" class="col-10 news-box">
+                <a href="news02.html" class="col-10 col-md-12 news-box">
                     <div class="news-date">
                         2025/06/22 <div class="news-type">活動</div>
                     </div>
@@ -204,7 +248,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="news03.html" class="col-10 news-box">
+                <a href="news03.html" class="col-10 col-md-12 news-box">
                     <div class="news-date">
                         2025/06/22 <div class="news-type">活動</div>
                     </div>
@@ -218,7 +262,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="news04.html" class="col-10 news-box">
+                <a href="news04.html" class="col-10 col-md-12 news-box">
                     <div class="news-date">
                         2025/06/22 <div class="news-type">活動</div>
                     </div>
@@ -232,7 +276,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="news05.html" class="col-10 news-box">
+                <a href="news05.html" class="col-10 col-md-12 news-box">
                     <div class="news-date">
                         2025/06/22 <div class="news-type">活動</div>
                     </div>
@@ -246,7 +290,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="news06.html" class="col-10 news-box">
+                <a href="news06.html" class="col-10 col-md-12 news-box">
                     <div class="news-date">
                         2025/06/22 <div class="news-type">活動</div>
                     </div>
@@ -260,7 +304,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="news07.html" class="col-10 news-box">
+                <a href="news07.html" class="col-10 col-md-12 news-box">
                     <div class="news-date">
                         2025/06/22 <div class="news-type">活動</div>
                     </div>

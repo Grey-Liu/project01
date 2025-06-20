@@ -12,10 +12,16 @@
     
     <title>Cafebara餐點一覽</title>
     <style>
+        body{
+            position: relative;
+            background-color: #FFFBF0;
+        }
         .page-bannar{
-            background: url("pic/page-bannar.png");
+            background: url("pic/page_bannar.png");
             background-repeat: no-repeat;
             background-size: 100%;
+            background-position: 50% 90%;
+            border-radius: 0 0 150px 150px;
             width: 70vw;
             height: 16vw;
             margin: 0 auto;
@@ -35,6 +41,21 @@
             font-family: "LXGW WenKai TC";
             font-size: 1vw;
             font-weight: 400;
+        }
+        @media screen and (max-width: 768px){
+            .page-bannar{
+                width: 100vw;
+                height: 28vh;
+                border-radius: 0 0 60px 60px;
+            }
+            .page-bannar .title{
+                padding-top:20vw;
+                font-size: 6vw;
+            }
+            .page-bannar .subtitle{
+                font-size: 4vw;
+                padding-top:1vw;
+            }
         }
         .menu-tabs {
             position: relative;
@@ -58,6 +79,9 @@
             color: #974713;
             position: relative;
             z-index: 1;
+        }
+        .menu-tabs .tab:focus {
+            outline: none;
         }
         .menu-tabs .indicator {
             position: absolute;
@@ -116,7 +140,7 @@
             font-family: "Kosugi Maru";
             font-size: 20px;
             font-weight: 400;
-            line-height: 30px; /* 150% */
+            line-height: 1.5em;
         }
         .meal-fade {
             opacity: 0;
@@ -130,6 +154,25 @@
         }
         footer{
             margin-top: 100px;
+        }
+        @media screen and (max-width: 768px){
+            .menu-tabs{
+                width: 95vw;
+                gap: 10px;
+            }
+            .meal-card{
+                gap: 10px;
+            }
+            .meal-card .pic{
+                width: 40vw;
+                height: 40vw;
+            }
+            .meal-name{
+                font-size: 20px;
+            }
+            .meal-desc{
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -212,7 +255,7 @@
         </div>
         <div class="container meal-main">
             <div class="row">
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/main01.png" alt="">
                     </div>
@@ -221,7 +264,7 @@
                         <div class="meal-desc">奶油白醬與綜合野菇燉煮成柔和的午後味道</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/main02.png" alt="">
                     </div>
@@ -230,7 +273,7 @@
                         <div class="meal-desc">經典茄汁筆管麵鋪上雙色起司，烤得剛剛好牽絲的程度</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/main03.png" alt="">
                     </div>
@@ -239,7 +282,7 @@
                         <div class="meal-desc">自製日式咖哩搭配太陽煎蛋和鬆軟白飯，一口就暖起來</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/main04.png" alt="">
                     </div>
@@ -248,7 +291,7 @@
                         <div class="meal-desc">溫溫的小鍋湯，裝著豆腐、蔬菜與好好休息的一餐</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/main05.png" alt="">
                     </div>
@@ -257,7 +300,7 @@
                         <div class="meal-desc">香煎雞腿排佐香草奶油醬，配上蔬菜與米飯，水豚也會點頭</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/main06.png" alt="">
                     </div>
@@ -270,7 +313,7 @@
         </div>
         <div class="container meal-drink">
             <div class="row">
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink01.png" alt="">
                     </div>
@@ -279,7 +322,7 @@
                         <div class="meal-desc">溫潤濃郁的義式濃縮搭配滑順鮮奶，像水豚的午後一樣悠閒。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink02.png" alt="">
                     </div>
@@ -288,7 +331,7 @@
                         <div class="meal-desc">布丁滑順與紅茶奶香完美融合，每一口都是甜甜的療癒。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink03.png" alt="">
                     </div>
@@ -297,7 +340,7 @@
                         <div class="meal-desc">新鮮檸檬加上氣泡水，清爽沁涼，像在草地上曬太陽的小水豚。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink04.png" alt="">
                     </div>
@@ -306,7 +349,7 @@
                         <div class="meal-desc">選用日式抹茶與鮮奶調和，微苦回甘，像午後草原上的微風。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink05.png" alt="">
                     </div>
@@ -315,7 +358,7 @@
                         <div class="meal-desc">濃厚可可香氣融合牛奶，溫暖醇香，適合靜靜發呆的午後。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink06.png" alt="">
                     </div>
@@ -324,7 +367,7 @@
                         <div class="meal-desc">草莓、藍莓與紅茶交織的果香協奏，酸甜平衡，一喝就微笑。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink07.png" alt="">
                     </div>
@@ -333,7 +376,7 @@
                         <div class="meal-desc">韓式柚子與蜂蜜結合，溫潤果香中帶點微酸，像月光下的安靜時光。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/drink08.png" alt="">
                     </div>
@@ -346,7 +389,7 @@
         </div>
         <div class="container meal-dessert">
             <div class="row">
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/dessert01.png" alt="">
                     </div>
@@ -355,7 +398,7 @@
                         <div class="meal-desc">綿密滑順的手工布丁，帶著焦糖的微苦香氣，一入口就融化的療癒感。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/dessert02.png" alt="">
                     </div>
@@ -364,7 +407,7 @@
                         <div class="meal-desc">抹茶蛋糕捲中夾入香甜奶霜與紅豆餡，彷彿在草地上翻滾的小確幸。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/dessert03.png" alt="">
                     </div>
@@ -373,7 +416,7 @@
                         <div class="meal-desc">酸甜柚子醬搭配酥脆塔皮，口感清新爽口，就像午后陽光灑落的味道。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/dessert04.png" alt="">
                     </div>
@@ -387,7 +430,7 @@
         </div>
         <div class="container meal-other">
             <div class="row">
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/others01.png" alt="">
                     </div>
@@ -396,7 +439,7 @@
                         <div class="meal-desc">選用中南美洲精品豆，風味溫潤、帶有堅果與焦糖香，適合每日早晨的一杯平靜。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/others02.png" alt="">
                     </div>
@@ -405,7 +448,7 @@
                         <div class="meal-desc">以青草與陽光白茶調為主，點燃即帶來戶外午睡般的舒適感，療癒你的每一刻。</div>
                     </div>
                 </div>
-                <div class="col-6 meal-card">
+                <div class="col-6 col-md-12 meal-card">
                     <div class="pic">
                         <img src="pic/others03.png" alt="">
                     </div>

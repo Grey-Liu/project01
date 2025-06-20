@@ -11,10 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <style>
+        body{
+            position: relative;
+            background-color: #FFFBF0;
+        }
         .page-bannar{
-            background: url("pic/page-bannar.png");
+            background: url("pic/page_bannar.png");
             background-repeat: no-repeat;
             background-size: 100%;
+            background-position: 50% 90%;
+            border-radius: 0 0 150px 150px;
             width: 70vw;
             height: 16vw;
             margin: 0 auto;
@@ -34,6 +40,21 @@
             font-family: "LXGW WenKai TC";
             font-size: 1vw;
             font-weight: 400;
+        }
+        @media screen and (max-width: 768px){
+            .page-bannar{
+                width: 100vw;
+                height: 28vh;
+                border-radius: 0 0 60px 60px;
+            }
+            .page-bannar .title{
+                padding-top:20vw;
+                font-size: 6vw;
+            }
+            .page-bannar .subtitle{
+                font-size: 4vw;
+                padding-top:1vw;
+            }
         }
         section{
             margin: 100px auto;
@@ -93,6 +114,25 @@
             font-style: normal;
             font-weight: 400;
             line-height: 30px;
+        }
+        @media screen and (max-width: 768px){
+            .row > *:nth-child(1) { order: 1; } 
+            .row > *:nth-child(2) { order: 2; } 
+            .row > *:nth-child(3) { order: 4; } 
+            .row > *:nth-child(4) { order: 3; } 
+            .row > *:nth-child(5) { order: 5; } 
+            .row > *:nth-child(6) { order: 6; } 
+
+            .text-box .text{
+                font-size: 16px;
+                line-height: 1.5em;
+            }
+            .bg-1,.bg-2,.bg-3{
+                display: none;
+            }
+            .text-box:last-child{
+                justify-content: space-between;
+            }
         }
 
     </style>
@@ -168,12 +208,12 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 col-md-12">
                     <div class="pic ">
                         <img src="pic/map02.png" alt="">
                     </div>
                 </div>
-                <div class="col-6 ">
+                <div class="col-6 col-md-12">
                     <div class="text-box">
                         <div class="text">Cafebara 水豚咖啡廳:<br>台北市大安區森 林路 42 號 1 樓<br><br>
                         交通方式<br>
@@ -183,29 +223,31 @@
                         <img class="text-box-bg bg-1"src="pic/info-foot01.png" alt="" >
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 col-md-12 ">
                     <div class="text-box">
-                        <div class="text">每日 11:00–20:00｜最後點餐時間 19:30<br>
-                        戶外草地與溫泉區若遇雨將暫停開放。<br><br>
-                        注意事項<br>
-                        水豚可拍照，請勿觸摸<br>
-                        餐點禁止外帶至溫泉區<br>
-                        若水豚正在睡覺，請讓牠繼續作夢<br>
+                        <div class="text">營業時間<br>
+                            每日營業時間：11:00–20:00<br>
+                            最後點餐時間為 19:30<br>
+                            如遇下雨，戶外草地與溫泉區將暫停開放。<br><br>
+                            注意事項<br>
+                            請不要觸碰水豚，牠們喜歡用自己的節奏認識你。<br>
+                            餐點請勿帶入溫泉區，一起守護放鬆與整潔的空間。<br>
+                            如果水豚正在睡覺，讓牠繼續做夢。<br>
                         </div>
                         <img class="text-box-bg bg-2"src="pic/info-foot02.png" alt="" >
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 col-md-12 ">
                     <div class="pic ">
                         <img src="pic/info01.png" alt="">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 col-md-12 ">
                     <div class="pic ">
                         <img src="pic/info02.png" alt="">
                     </div>
                 </div>
-                <div class="col-6 ">
+                <div class="col-6 col-md-12">
                     <div class="text-box">
                         <div class="text">有任何問題、預約需求或想說的話，<br>
                         都可以透過以下方式找到我們：<br>
