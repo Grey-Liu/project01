@@ -238,6 +238,7 @@
             font-weight: 900;
             cursor: pointer;
             user-select: none;
+            border: #FFF3D1 2px solid;
         }
         @media screen and (max-width: 768px) {
 
@@ -347,7 +348,7 @@
             bottom: 5vw;
             right: 5vw;
             z-index: 100;
-            border: #FFF3D1 2px solid;
+            
         }
 
 
